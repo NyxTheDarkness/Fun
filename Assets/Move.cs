@@ -6,6 +6,6 @@ public class Move : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		float v = Input.GetAxisRaw("Horizontal");
-		GetComponent<Rigidbody2D>().velocity = new Vector2(0, v) * speed;
+		GetComponent<Rigidbody2D>().velocity += new Vector2(v, 0) * speed;
 	}
 }
